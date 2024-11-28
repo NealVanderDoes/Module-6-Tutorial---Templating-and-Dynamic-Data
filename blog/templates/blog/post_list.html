@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neal Vander Does Blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">Neal Vander Does Blog</a></h1>
+        </header>
+
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+
+        <footer>
+            Created by Neal Vander Does with help from Django Girls tutorial.
+        </footer>
+    </body>
+</html>
