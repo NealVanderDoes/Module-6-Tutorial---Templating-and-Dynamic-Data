@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Neal Vander Does Blog</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Neal Vander Does Blog</a></h1>
-        </header>
-        
-        {% for post in posts %}
-        <article>
-            <time>published: {{ post.published_date }}</time>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <article class="post">
+            <time class="date">
+                {{ post.published_date }}
+            </time>
             <h2><a href="">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
         </article>
-        {% endfor %}
-
-        <footer>
-            Created by Neal Vander Does with help from Django Girls tutorial.
-        </footer>
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}
